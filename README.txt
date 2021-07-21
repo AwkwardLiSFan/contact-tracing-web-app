@@ -1,5 +1,10 @@
 Contribution to group project: everything EXCLUDING the heatmap and Venue Manager dashboard functions 
 
+Credentials for login: 
+User - Username: 123456 Password: 12345 
+Venue Manager - Username: bm Password: bm 
+Admin- Username: asg Password: asg
+
 Extra information regarding the WDC Project (Group 69):
 
 a) Database:
