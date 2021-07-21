@@ -1,0 +1,364 @@
+.main_content_div {
+  background: url("/images/blu_stripes.png");
+  font-family: "Raleway", Verdana;
+}
+
+p {
+  font-family:'Raleway';
+}
+
+body {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font: 14px 'Raleway', Helvetica, Arial, sans-serif;
+  background: url("/images/morocco.png");
+}
+
+a {
+  color: #00B7FF;
+}
+
+.covid-safety {
+  font-family: 'Raleway', Verdana, Helvetica, sans-serif;
+  font-size:16px;
+  text-align: left;
+  padding-left: 35%;
+  font-weight: bold;
+}
+
+#main > p {
+  font-family: 'Raleway', Verdana, Helvetica, sans-serif;
+  font-size:16px;
+}
+
+header {
+  overflow: hidden;
+  background-color: #2F80B5 ;
+}
+
+.headerimg {
+  width: 95%;
+  margin: auto;
+  text-align:center;
+  top:60px;
+  position:absolute;
+}
+
+#himg {
+  width: 600px;
+  height: 150px;
+  margin-left:auto;
+  z-index:-2;
+}
+
+/*.imgwrap {*/
+/*    display: table;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    bottom: 75px;*/
+/*    left: 660px;*/
+
+    /*top: 65px;*/
+
+/*}*/
+
+header a:hover {
+  color: white;
+}
+
+/* Navigation Style Start */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #deeafc;
+}
+
+ul.breadcrumb li {
+  display: inline;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/* Navigation Style End */
+
+#logo {
+   padding-left: 15px;
+   width: 100px;
+   height: 100px;
+}
+
+#logo-text {
+  font-size: 15px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.homepage-heading {
+  font-family: 'Raleway', Verdana, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.heading-about-us {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
+.content-about-us {
+  color: black;
+  font-size: 16px;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: 'Raleway', Verdana, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+.video {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size:20px;
+  color: black;
+  font-family: 'Raleway', Verdana, Helvetica, sans-serif;
+}
+
+/*Footer Content*/
+
+footer {
+	width: 100%;
+	/*
+  left: 0;
+	bottom: 0;
+	*/
+	display: flex;
+	flex: 2 1 auto;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 125px;
+	box-sizing: border-box;
+	background-color:#2F80B5;
+	color: black;
+	text-align: center;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.faqs {
+  display: block;
+  flex: 1 0 auto;
+}
+
+.faqs > a {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about_us {
+  display: block;
+  flex: 1 0 auto;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about_us > a {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+.socials {
+  display: block;
+  flex: 1 0 auto;
+}
+
+/*End of Footer Content*/
+
+
+/* login/signup Button CSS content*/
+.header-right {
+  padding-right: 40px;
+  padding-top: 50px;
+  float:right;
+}
+
+.button {
+  border-radius: 100px;
+  background-color:#2F80B5;
+  border-color: white;
+  border-width: medium;
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  display: inline-block;
+  font-family: 'Raleway', verdana;
+  position: relative;
+  transition: 0.5s;
+}
+
+.log span:after {
+  content: '\2714';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.reg span:after {
+  content: '\270E';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:active {
+  opacity: 0.5;
+}
+
+
+/* Carousel CSS content */
+.Carousel-container {
+  max-width: 1100px;
+  position: relative;
+  margin: auto;
+  box-sizing:border-box;
+}
+
+.images {
+  display: none;
+  box-sizing:border-box;
+}
+
+.images:hover {
+  display: none;
+  box-sizing:border-box;
+}
+
+.back, .forward {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 30px;
+  opacity: 0.8;
+}
+
+.forward {
+  right: 0;
+}
+
+.back:hover, .forward:hover {
+  opacity:0.5;
+}
+
+.caption {
+  color: white;
+  font-size: 18px;
+  font: 'Raleway', Verdana;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: lightblue;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active, .dot:hover {
+  background-color: Darkblue;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .3}
+  to {opacity: 1}
+}

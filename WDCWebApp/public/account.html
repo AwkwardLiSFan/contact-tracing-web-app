@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Account Information</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/account.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/javascripts/account.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--JQUERY-->
+    </head>
+    <body onload="checkPermission();">
+    <div class="main_content_div">
+        <header>
+            <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+             <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+                <div class="headerimg"></div>
+                <div class="header-right">
+                     <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+                </div>
+            <p id="logo-text">Safety. Together.</p>
+        </header>
+        <div>
+            <nav>
+              <ul class="breadcrumb" id="bcu">
+                <li><a href="/checkin.html">Dashboard</a></li>
+                <li>Manage Account Information</li>
+              </ul>
+            </nav>
+        </div>
+
+        <div>
+            <nav>
+              <ul class="breadcrumb" id="bcvm">
+                <li><a href="/venuedash.html">Dashboard</a></li>
+                <li>Manage Account Information</li>
+              </ul>
+            </nav>
+        </div>
+
+
+
+            <h2>Manage Account</h2>
+            <div class="topnav" id="pSearch">
+                    <input type="text" placeholder="Search for user or venue"> <!--Could use type search when using server-->
+            </div>
+            <div class="manageBlock" id="pi">
+                <h2>Personal Information</h2>
+                <form id="piform">
+                    <div class="input-block">
+                        <label for="fname">First Name</label>
+                        <input type="text" maxlength="26" id="fname" name="fname" value="" placeholder="First Name...">
+                    </div>
+                    <div class="input-block">
+                        <label for="lname">Last Name</label>
+                        <input type="text" maxlength="26" id="lname" name="lname" value="" placeholder="Last Name...">
+                    </div>
+                    <div class="input-block">
+                        <label for="email">Email</label>
+                        <input type="email" maxlength="128" minlength="3" id="email" name="email" value="" placeholder="john.doe@gmail.com">
+                    </div>
+                    <div class="input-block">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" value="" placeholder="+61444555666">
+                    </div>
+                    <div class="input-block">
+                        <label for="username">Username</label>
+                        <input type="text" maxlength="32" id="username" name="username" value="" placeholder="Username...">
+                    </div>
+                    <p>You must enter your current password to change your details.</p>
+                    <div class="input-block">
+                        <label for="pwd">Old Password</label>
+                        <input type="password" maxlength="160" id="pwd_old" name="pwd_old" value="" placeholder="Password..." required>
+                    </div>
+                    <br>
+                    <div class="input-block">
+                        <label for="pwd">New Password</label>
+                        <input type="password" maxlength="160" id="pwd" name="pwd" value="" placeholder="Password...">
+                    </div>
+                    <div class="input-block">
+                        <label for="pwd_conf">Confirm Password</label>
+                        <input type="password" maxlength="160" id="pwd_conf" name="pwd_conf" value="" placeholder="Confirm Password...">
+                    </div>
+
+                    <button onclick="changePersonalInformation()">Apply Changes</button>
+                    <button>Cancel</button>
+                </form>
+            </div>
+
+            <!--Manage Venue-->
+            <div class="manageBlock" id="vm">
+                <h2>Venue Management</h2>
+                <div class="topnav" id="vSearch">
+                    <input type="text" placeholder="Search.."> <!--Could use type search when using server-->
+                    <!--<p>Venue id: 0278641</p> will update when venue is selected using vue.js-->
+                </div>
+
+                <form id="vmform">
+                    <div class="input-block">
+                    <label for="cname">Venue Name</label>
+                        <input type="text" maxlength="32" id="cname" name="cname" value="" placeholder="Company Name...">
+                    </div>
+                    <div>
+                        <div class="input-block">
+                            <label for="address2">Address Line 1</label>
+                            <input type="text" maxlength="60" id="address2" value="" placeholder="Address..." name="address2">
+                        </div>
+                    </div>
+                    <div class="input-block">
+                        <label for="cap">Venue Maximum Capacity</label>
+                        <input type="number" id="cap" name="cap" value="" placeholder="0" min="0" max="1000">
+                    </div>
+                    <div class="input-block">
+                        <label for="name">Name</label>
+                        <input type="text" maxlength="26" id="name" name="name" value="" placeholder="Name...">
+                    </div>
+                    <div class="input-block">
+                        <label for="vphone">Phone Number</label>
+                        <input type="tel" id="vphone" name="vphone" value="" placeholder="1234-567-890">
+                    </div>
+                    <!--<div class="input-block">-->
+                    <!--    <label for="industry">Industry</label>-->
+                    <!--    <select name="industry" id="industry">-->
+                    <!--        <option value="none" selected disabled hidden>Select an Industry</option>-->
+                    <!--        <option value="agricultureForestryFishing">Agriculture, Forestry, Fishing</option>-->
+                    <!--        <option value="mining">Mining</option>-->
+                    <!--        <option value="manufacturing">Manufacturing</option>-->
+                    <!--        <option value="electricityGasWaterWasteServices">Electricity, Gas, Water, Waste Services</option>-->
+                    <!--        <option value="construction">Construction</option>-->
+                    <!--        <option value="wholesaleTrade">Wholesale Trade</option>-->
+                    <!--        <option value="retailTrade">Retail Trade</option>-->
+                    <!--        <option value="accommodationAndFoodServices">Accommodation and Food Services</option>-->
+                    <!--        <option value="transportPostalAndWarehousing">Transport, Postal and Warehousing</option>-->
+                    <!--        <option value="informationMediaAndTelecommunications">Information Media and Telecommunications</option>-->
+                    <!--        <option value="financialAndInsuranceServices">Financial and Insurance Services</option>-->
+                    <!--        <option value="rentalHiringAndRealEstateServices">Rental, Hiring and Real Estate Services</option>-->
+                    <!--        <option value="professionalScientificTechnicalServices">Professional, Scientific, Technical Services</option>-->
+                    <!--        <option value="administrativeAndSupportServices">Administrative and Support Services</option>-->
+                    <!--        <option value="publicAdministrationAndSafety">Public Administration and Safety</option>-->
+                    <!--        <option value="educationAndTraining">Education and Training</option>-->
+                    <!--        <option value="healthCareAndSocialAssistance">Health Care and Social Assistance</option>-->
+                    <!--        <option value="artsAndRecreationServices">Arts and Recreation Services</option>-->
+                    <!--        <option value="otherServices">Other Services</option>-->
+                    <!--    </select>-->
+                    <!--</div>-->
+
+                    <button onclick="changeVenueInformation()">Apply Changes</button> <!--or <input type="submit"> -->
+                    <button>Cancel</button>
+                </form>
+
+            </div>
+
+            <!--Pop Up -->
+            <!--Login Pop Up-->
+            <div id="idlog" class="modal">
+              <span onclick="closeLogPopUp()" class="close" title="Close Login">&times;</span>
+
+              <form class="modal-content">
+                <div class="popTitle">
+                    <h1>Login</h1>
+                </div>
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" id="uname" class="popinput" placeholder="Enter Username" name="uname" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" id="psw" class="popinput" placeholder="Enter Password" name="psw" required>
+
+                  <button type="submit" class="loginbtn">Login</button>
+                  <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="container" id="col">
+                        <p class="popTitle">Or Login with:</p>
+                        <a href="#" class="fb btn">
+                          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                        </a>
+                        <a href="#" class="twitter btn">
+                          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                        </a>
+                        <a href="#" class="google btn">
+                          <i class="fa fa-google fa-fw"></i> Login with Google+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="closeLogPopUp()" class="closebtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </form>
+            </div>
+            <!--End of Login Pop Up-->
+
+            <!-- Register Pop Up -->
+            <div id="idreg" class="modal">
+              <span onclick="closeRegPopUp()" class="close" title="Close Sign Up">&times;</span>
+
+              <form class="modal-content">
+                <div class="popTitle">
+                    <h1>Register</h1>
+                </div>
+                <div class="container">
+                  <label for="popfname"><b>First Name</b></label>
+                  <input type="text" id="popfname" maxlength="26" class="popinput" placeholder="Enter First Name" name="popfname" required>
+
+                  <label for="poplname"><b>Last Name</b></label>
+                  <input type="text" id="poplname" maxlength="26" class="popinput" placeholder="Enter Last Name" name="poplname" required>
+
+                  <label for="popemail"><b>Email (Optional)</b></label>
+                  <input type="email" id="popemail" maxlength="128" minlength="3" class="popinput" placeholder="Enter Email" name="popemail">
+
+                  <label for="poptel"><b>Phone Number</b></label>
+                  <input type="tel" id="poptel" class="popinput" minlength="9" maxlength="14" placeholder="Enter Phone Number" name="poptel" required>
+
+                  <label for="popusername"><b>Username</b></label>
+                  <input type="text" id="popusername" class="popinput" placeholder="Enter Username" name="popusername" required>
+
+                  <label for="poppassword"><b>Password</b></label>
+                  <input type="password" id="poppassword" class="popinput" placeholder="Enter Password" name="poppassword" required>
+
+                  <label for="popcpassword"><b>Confirm Password</b></label>
+                  <input type="password" id="popcpassword" class="popinput" placeholder="Re-Enter Password" name="popcpassword" required>
+                  <p>Are you a venue manager, check this box to register your venue.</p>
+                  <label><input type="checkbox" name="remember"> Venue Manager</label>
+                  <br>
+                  <br>
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                  <button type="submit" class="loginbtn">Register</button>
+                  <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="closeRegPopUp()" class="closebtn">Cancel</button>
+                </div>
+              </form>
+            </div>
+            <!--End of Register Pop Up-->
+            <!-- End of Pop Up -->
+
+            <footer>
+                <div class="about_us">
+                    <a href="about.html" class="ftr_mid">About Us</a>
+                </div>
+                <div class="socials">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <p>Copyright &copy; 2021</p>
+                </div>
+                <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+                <div style="clear:both"></div>
+            </footer>
+        </div>
+    </body>
+</html>

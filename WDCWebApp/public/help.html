@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid-19 Contact Tracing Web App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/help.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="/javascripts/account.js"></script>
+</head>
+
+<body>
+<div class="main_content_div">
+  <header>
+    <a href="https://ide-3b11fbcefc8643ed8aabbde2d063795b-8080.cs50.ws"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+    <div class="header-right">
+        <button class="button log" data-href="#register" onclick="openLogPopUp()"><span>Login</span></button>
+        <button class="button reg" data-href="#login" onclick="openRegPopUp()"><span>Register</span></button>
+    </div>
+    <p id="logo-text">Safety. Together.</p>
+  </header>
+
+  <!--Page Breadcrumbs-->
+  <div>
+    <nav>
+      <ul class="breadcrumb">
+        <li><a href="/index.html">Home</a></li>
+        <li>Help</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="main">
+    <h1 class="homepage-heading">FAQs</h1>
+    <p>Below, you can browse the most frequently asked questions on a variety of topics, from using our app to staying safe from COVID-19:</p>
+    <p style="font-weight:bold">Using the App</p>
+    <button type="button" class="question">1. How do I use the app?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>Our app is extremely simple to use. New to the app? Sign up using the 'Register' link on the top-right of the page. Already a registered user? Simply click on 'Login' next to Register
+    in order to access your user dashboard. Once logged in, you can record your visits, check the logs, access a map to observe current active hotspots and edit your profile!</p>
+    </div>
+    <button type="button" class="question">2. How can I check in?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>From your user dashboard, click on the check-in button. In the pop-up window, simply enter the venue code and press submit! The app will let you know if your check-in was successful or if the code was invalid. In case of any other technical difficulties, please contact the
+      manager of the establishment for further assistance.</p>
+    </div>
+    <button type="button" class="question">3. I am a health official. How do I access my admin dashboard?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>Please make sure you login as an admin, you'll automatically get access to your admin dashboard after doing that. From here, you can sign up new health officials, update hotspots, examine check-in history
+      for any user or venue and much more.</p>
+    </div>
+    <button type="button" class="question">4. Can I use the app as a venue owner?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>Yes! You can sign up as a venue owner. Our customized dashboard lets you manage details about your venue such as employee details, capacity and so on. You will also have access to a list of users who
+      checked-in to your venue.</p>
+    </div>
+    <p style="font-weight:bold">COVID-19</p>
+    <button type="button" class="question">1. Can the app detect COVID-19?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>No, the app cannot tell you if you are suffering from COVID-19 or not. Even in the case of the slightest symptoms, we highly recommend you to get tested for COVID-19. The app is useful for tracking your outings and lets you
+      know if you've visited a COVID-19 hotspot. In the event that you visit a hotspot, you will be contacted by a health official with further instructions. Please isolate in your home in the meantime.</p>
+    </div>
+    <button type="button" class="question">2. What are the symptoms of COVID-19?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>The common symptoms of COVID-19 include fever, dry cough and tiredness. Some patients might also experience bodyaches, sore throat, diarrhoea, conjunctivitis, headache, loss of taste and smell, or
+      a rash. It can take up to 2 weeks for symptoms to appear in an infected person.</p>
+    </div>
+    <button type="button" class="question">3. How do I stay safe from COVID-19?<i class="dropdown"></i></button>
+    <div class="answer">
+      <p>Follow the national social distancing rules in your country at all times. Be mindful of restrictions, if any. In case of further queries when you're out, contact the venue manager at the
+      establishment for clarification regarding venue capacity and their own COVID-19 guidelines, if any. Make sure you check-in to any venues you visit using a contact-tracing app.</p>
+    </div>
+    <p>Didn't find what you were looking for? Send us an email at <a href="mailto:sohamaf30@gmail.com">covidapp@contacttracers.com</a> and we'll get back to you in 3-4 business days.</p>
+  </div>
+
+  <script src="/javascripts/help.js"></script>
+
+  <!--Pop Up -->
+  <!--End of Login Pop Up-->
+  <div id="idlog" class="modal">
+    <span onclick="closeLogPopUp()" class="close" title="Close Login">&times;</span>
+
+    <form class="modal-content">
+      <div class="popTitle">
+          <h1>Login</h1>
+      </div>
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" id="uname" class="popinput" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="psw" class="popinput" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" class="loginbtn">Login</button>
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+      </div>
+      <hr>
+      <div class="container">
+          <div class="container" id="col">
+              <p class="popTitle">Or Login with:</p>
+              <a href="#" class="fb btn">
+                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+              </a>
+              <a href="#" class="twitter btn">
+                <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+              </a>
+              <a href="#" class="google btn">
+                <i class="fa fa-google fa-fw"></i> Login with Google+
+              </a>
+          </div>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="closeLogPopUp()" class="closebtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <!--End of Login Pop Up-->
+
+  <!-- Register Pop Up -->
+  <div id="idreg" class="modal">
+    <span onclick="closeRegPopUp()" class="close" title="Close Sign Up">&times;</span>
+
+    <form class="modal-content">
+      <div class="popTitle">
+          <h1>Register</h1>
+      </div>
+      <div class="container">
+        <label for="popfname"><b>First Name</b></label>
+        <input type="text" id="popfname" maxlength="26" class="popinput" placeholder="Enter First Name" name="popfname" required>
+
+        <label for="poplname"><b>Last Name</b></label>
+        <input type="text" id="poplname" maxlength="26" class="popinput" placeholder="Enter Last Name" name="poplname" required>
+
+        <label for="popemail"><b>Email (Optional)</b></label>
+        <input type="email" id="popemail" maxlength="128" minlength="3" class="popinput" placeholder="Enter Email" name="popemail">
+
+        <label for="poptel"><b>Phone Number</b></label>
+        <input type="tel" id="poptel" class="popinput" minlength="9" maxlength="14" placeholder="Enter Phone Number" name="poptel" required>
+
+        <label for="popusername"><b>Username</b></label>
+        <input type="text" id="popusername" class="popinput" placeholder="Enter Username" name="popusername" required>
+
+        <label for="poppassword"><b>Password</b></label>
+        <input type="password" id="poppassword" class="popinput" placeholder="Enter Password" name="poppassword" required>
+
+        <label for="popcpassword"><b>Confirm Password</b></label>
+        <input type="password" id="popcpassword" class="popinput" placeholder="Re-Enter Password" name="popcpassword" required>
+        <p>Are you a venue manager, check this box to register your venue.</p>
+        <label><input type="checkbox" name="remember"> Venue Manager</label>
+        <br>
+        <br>
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <button type="submit" class="loginbtn">Register</button>
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="closeRegPopUp()" class="closebtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <!--End of Register Pop Up-->
+  <!-- End of Pop Up -->
+
+  <footer>
+    <div class="about_us">
+        <a href="about.html" class="ftr_mid">About Us</a>
+    </div>
+    <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+    <div style="clear:both"></div>
+  </footer>
+</div>
+</body>
+
+</html>
+
+<!-- UNUSED CODE (MAYBE FOR FUTURE IMPROVEMENTS?) -->
+
+<!-- <div class="faq">
+      <section id="nUsing">
+        <h3>Hi</h3>
+      </section>
+      <section id="nTracing">
+        <h3>Hi</h3>
+      </section>
+      <section id="nVenue">
+        <h3>Hi</h3>
+      </section>
+      <section id="nManager">
+        <h3>Hi</h3>
+      </section>
+      <section id="nAddHotspot">
+        <h3>Hi</h3>
+      </section>
+      <section id="nFaq">
+        <h3>Hi</h3>
+      </section>
+    </div>
+    <nav class="sidebar">
+      <ol>
+        <li><a href="#nUsing">Using the app</a></li>
+        <li><a href="#nTracing">How Contact Tracing Works</a></li>
+        <li><a href="#nVenue">Venue Owners</a></li>
+        <li><a href="#nManager">Health Professionals</a></li>
+        <li>
+          <ul>
+            <li><a href="#nAddHotspot">Adding Hotspots</a></li>
+          <li><a href="#nFaq">FAQ</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+-->

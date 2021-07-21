@@ -1,0 +1,528 @@
+body {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font: 14px "Raleway", Helvetica, Arial, sans-serif;
+  background: url("/images/whirlpool.png");
+}
+
+
+.main_content_div {
+  background: url("/images/blu_stripes.png");
+  font-family: "Raleway", Verdana;
+}
+
+
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.headerimg {
+  width: 95%;
+  margin: auto;
+  text-align:center;
+  top:60px;
+  position:absolute;
+}
+
+#himg {
+  width: 600px;
+  height: 150px;
+  margin-left:auto;
+  z-index:-2;
+}
+
+/*Font/formating from style.css*/
+.covid-safety {
+  font-family: "Raleway",Verdana, Helvetica, sans-serif;
+  font-size:16px;
+  text-align: left;
+  padding-left: 35%;
+  font-weight: bold;
+}
+
+#main > p {
+  font-family: "Raleway", Verdana, Helvetica, sans-serif;
+  font-size:16px;
+}
+/* end */
+
+/*Header Content Start*/
+
+header {
+  overflow: hidden;
+  background-color: #2F80B5 ;
+  padding-bottom: 10px;
+}
+
+.header-link {
+  float: left;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 30px;
+  border-radius: 4px;
+}
+
+header a:hover {
+  color: white;
+}
+
+#logo {
+   padding-left: 15px;
+   width: 100px;
+   height: 100px;
+}
+
+#logo-text {
+  font-size: 15px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+#piform input[type=submit] {
+  float: left;
+  clear: left;
+  display: block;
+  background-color: #7EC8E3;
+  color: black;
+  font-size: 150%;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 10px 2px 20px 225px;
+  cursor: pointer;
+}
+
+/*Header Content End*/
+
+#piform input {
+    display: inline-block;
+    border-radius: 8px;
+    border-color: #add8e6;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#piform span {
+    display: inline-block;
+    border-color: #add8e6;
+    padding-bottom: 13px;
+}
+
+#piform select {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#piform label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    font-weight: bold;
+    text-shadow: 2px 2px #B8B8B8;
+    width: 250px;
+    text-align: right;
+    padding: 10px;
+}
+
+/*Header Content End*/
+#vpiform input[type=submit] {
+  float: left;
+  clear: left;
+  display: block;
+  background-color: #7EC8E3;
+  color: black;
+  font-size: 150%;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 10px 2px 20px 225px;
+  cursor: pointer;
+}
+#vpiform input {
+    display: inline-block;
+    border-radius: 8px;
+    border-color: #add8e6;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#vpiform span {
+    display: inline-block;
+    border-color: #add8e6;
+    padding-bottom: 13px;
+}
+
+#vpiform select {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#vpiform label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    font-weight: bold;
+    text-shadow: 2px 2px #B8B8B8;
+    width: 250px;
+    text-align: right;
+    padding: 10px;
+}
+
+/* Navigation Style End */
+
+/*Footer Content Start*/
+
+footer {
+	width: 100%;
+	/*
+  left: 0;
+	bottom: 0;
+	*/
+	display: flex;
+	flex: 2 1 auto;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 125px;
+	box-sizing: border-box;
+	background-color:#2F80B5;
+	color: black;
+	text-align: center;
+}
+
+footer a:hover {
+  color: black;
+  text-shadow: 2px 2px #C2C2C2;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.faqs {
+  display: block;
+  flex: 1 0 auto;
+}
+
+.faqs > a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about_us {
+  display: block;
+  flex: 1 0 auto;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about_us > a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.socials {
+  display: block;
+
+  flex: 1 0 auto;
+}
+
+/*End of Footer Content*/
+
+/*login/signup button css*/
+.header-right {
+  padding-right: 40px;
+  padding-top: 50px;
+  float: right;
+}
+
+.button {
+  border-radius: 100px;
+  background-color:#2F80B5;
+  border-color: white;
+  border-width: medium;
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  display: inline-block;
+  font-family: 'Raleway', verdana;
+  position: relative;
+  transition: 0.5s;
+}
+
+.log span:after {
+  content: '\2714';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.reg span:after {
+  content: '\270E';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:active {
+  opacity: 0.5;
+}
+
+/* Close Button */
+.close {
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Close Button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/*table css*/
+
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+table th {
+  text-transform: uppercase;
+  text-align: center;
+  background: #04009a;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 30px;
+  opacity: 0.8;
+  font-size:20px;
+}
+
+table th:hover {
+  opacity: 1;
+}
+
+
+table, td, th {
+  border: 2px solid darkblue;
+}
+
+table td {
+  font-size: 20px;
+  text-align: left;
+  padding: 8px;
+}
+
+
+table tbody tr td {
+  background: #f0f1f4;
+  text-align: center;
+}
+
+#tablebutton {
+  text-align: center
+}
+
+.tablebutcont {
+  height: 30px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Pop Up Content */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Pop Up Box */
+.modal-content {
+  padding: 30px;
+  border: 3px solid #f1f1f1;
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  display:inline-block;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-all {
+  /* Position it in the top right corner outside of the modal */
+  display:inline-block;
+  right: 30px;
+  top: 0;
+  color: #FF0000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close Button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Close Button on hover */
+.close-all:hover,
+.close-all:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.manageBlock{
+  display: block;
+  width: 100%;
+  margin-left:25%;
+  margin-right:500px;
+}
+
+#usertable {
+  display: block;
+  width: 100%;
+}
+
+#usertable2 {
+  display: block;
+  width: 100%;
+}
+
+
+#userhistoryadmin{
+  display: block;
+  width: 100%;
+}
+
+/* Navigation Style Start */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #deeafc;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-weight: bold;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  font-weight:bold;
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/* Navigation Style End */

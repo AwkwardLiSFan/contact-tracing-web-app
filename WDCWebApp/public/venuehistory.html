@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid-19 Contact Tracing Web App</title>
+  <link rel="stylesheet" href="/stylesheets/userhistory.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="javascripts/venuehistory.js" defer></script>
+</head>
+
+<body>
+<div class="main_content_div">
+<header>
+  <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+  <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+    <div class="header-right">
+        <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+    </div>
+  <p id="logo-text">Safety. Together.</p>
+</header>
+
+<!--ideas: add breadcrumbs, page number between buttons, make button look better, complete last check in box-->
+
+<div>
+    <nav>
+      <ul class="breadcrumb">
+        <li><a href="/venuedash.html">Dashboard</a></li>
+        <li>Venue History</li>
+      </ul>
+    </nav>
+</div>
+
+<div id="main">
+
+    <h1 class="homepage-heading">Venue Check-in History</h1>
+
+    <!--<div id="infobox">-->
+    <!--    <p class="boxtext" style="font-weight:bold;">Your last check in was at: </p>-->
+    <!--    <p class="boxtext">An awesome location!</p>-->
+    <!--    <p class="boxtext" style="font-weight:bold;">on: </p>-->
+    <!--    <p class="boxtext">13/05/2021</p>-->
+    <!--</div>-->
+
+    <div id="usertable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Given Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Time of Visit</th>
+                </tr>
+            </thead>
+            <tbody id="add_here">
+
+            </tbody>
+        </table>
+        <div class="tablebutcont">
+            <div class="center">
+                <!-- spacer div -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="about_us">
+        <a href="about.html" class="ftr_mid">About Us</a>
+    </div>
+    <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+    <div style="clear:both"></div>
+</footer>
+
+</div>
+</body>
+
+</html>

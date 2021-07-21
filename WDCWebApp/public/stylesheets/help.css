@@ -1,0 +1,41 @@
+.headerimg {
+  left: 750px;
+  top: 65px;
+  z-index: 1;
+  width: 600px;
+  height: 150px;
+  position: absolute;
+  background: url("/images/icons34.jpg");
+  overflow:hidden;
+}
+
+.main_content_div {
+  background: url("/images/blu_stripes.png");
+  font-family: "Raleway", Verdana;
+}
+
+.question {
+    background-color: #deeafc;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+}
+
+.dropdown {
+    float: right;
+    border: solid black;
+    padding: 6px;
+    border-width: 0 5px 5px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: #f2f2f2;
+}

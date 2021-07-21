@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Account Information</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/adminaccount.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/javascripts/adminhistory.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--JQUERY-->
+    </head>
+    <body >
+      <div class="main_content_div">
+        <header>
+          <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+          <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+          <div class="header-right">
+             <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+          </div>
+          <p id="logo-text">Safety. Together.</p>
+        </header>
+        <!-- Breadcrumb -->
+        <div>
+            <nav>
+              <ul class="breadcrumb">
+                <li><a href="/admindash.html">Dashboard</a></li>
+                <li>Check-In History</li>
+              </ul>
+            </nav>
+        </div>
+            <h1 style="text-align: center">View Check-In History</h1>
+            <div id="usertable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Given Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody id="add_here">
+
+                    </tbody>
+                </table>
+                <div class="tablebutcont">
+                    <div class="center">
+                        <!-- spacer div -->
+                    </div>
+                </div>
+            </div>
+                <div class="userhistory" style="display:none" id="uh">
+                       <table>
+                           <thead>
+                               <tr>
+                                   <th>Venue Name</th>
+                                   <th>Venue Address</th>
+                                   <th>Venue Type</th>
+                                   <th>Time of Visit</th>
+                            </tr>
+                        </thead>
+                        <tbody id="selected_user_history_here">
+
+                        </tbody>
+                        </table>
+                </div>
+                <br>
+
+                <!-- Venues -->
+                <div id="usertable2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Venue Name</th>
+                                <th>Venue Type</th>
+                            </tr>
+                        </thead>
+                        <tbody id="add_venues_here">
+
+                        </tbody>
+                    </table>
+                    <div class="tablebutcont">
+                        <div class="center">
+                            <!-- spacer div -->
+                        </div>
+                    </div>
+                </div>
+
+                     <div class="venuehistory" style="display:none" id="vh">
+                       <table>
+                           <thead>
+                               <tr>
+                                    <th>Given Name</th>
+                                    <th>Last Name</th>
+                                    <th>Phone</th>
+                                    <th>Time of Visit</th>
+                                </tr>
+                            </thead>
+                            <tbody id="selected_venue_history_here">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+        <br>
+        <footer>
+            <div class="about_us">
+                <a href="about.html" class="ftr_mid">About Us</a>
+            </div>
+            <div class="socials">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <p>Copyright &copy; 2021</p>
+            </div>
+            <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+            <div style="clear:both"></div>
+        </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid-19 Contact Tracing Web App</title>
+  <link rel="stylesheet" href="/stylesheets/checkin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="/javascripts/checkin.js"></script>
+</head>
+
+<body>
+<div class="main_content_div">
+<header>
+  <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+  <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+    <div class="header-right">
+        <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+    </div>
+  <p id="logo-text">Safety. Together.</p>
+</header>
+
+
+<!--some ideas: Add success popup for successful check-in)-->
+
+<div id="main">
+
+  <h1 class="homepage-heading">User Dashboard</h1>
+
+  <div class="row">
+      <div class="column">
+        <figure>
+        <input class="dashbutton" type="image" src="https://i.ytimg.com/vi/O65VzJV_3ng/maxresdefault.jpg" name="check-in button" alt="check-in" style="width:100%" onclick="openForm()"/>
+        <figcaption class="buttoncaption">CHECK IN</figcaption>
+        </figure>
+      </div>
+      <div class="column">
+        <figure>
+        <input class="dashbutton" type="image" src="https://i.ibb.co/MVTVvKJ/Untitled-3.png" name="Account info button" alt="manage account information" style="width:100%" onclick="location.href='account.html';" />
+        <figcaption class="buttoncaption">MANAGE ACCOUNT INFORMATION</figcaption>
+        </figure>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <figure>
+      <input class="dashbutton" type="image" src="https://i.ibb.co/x8xBdQy/Untitled-1.png" name="Check-in history button"  alt="view check-in history" style="width:100%" onclick="location.href='userhistory.html';"/>
+      <figcaption class="buttoncaption">VIEW CHECK IN HISTORY</figcaption>
+      </figure>
+    </div>
+    <div class="column">
+      <figure>
+      <input class="dashbutton" type="image" src="https://i.ibb.co/F38KFnj/Untitled-2.png" name="Hotspots button"  alt="view hotspots" style="width:100%" onclick="location.href='heatmapU.html';"/>
+      <figcaption class="buttoncaption">VIEW HOTSPOTS</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div id="notifications">
+    <form onsubmit="notifications()">
+      <p id="notifications-heading">Stay Updated. Get Notified.</p>
+      <label class="notif_container">Send me a list of active hotspots
+        <input type="checkbox" id="notif1" name="notif1">
+        <span class="check"></span>
+      </label>
+      <label class="notif_container">Alert me upon visiting a hotspot
+        <input type="checkbox" id="notif2" name="notif2">
+        <span class="check"></span>
+      </label>
+      <input type="submit" value="Receive Notifications">
+    </form>
+  </div>
+
+  <div>
+    <div class="form-popup" id="checkin-popup">
+      <form action="/checkdata" class="form-container" method="post">
+        <h2>Enter Venue ID</h2>
+        <input type="number" min="1" max="3" id="checkincode" name="q" required>
+        <button type="submit" class="btn" onclick="closeForm()">CHECK IN</button>
+        <button type="button" class="btn exit" onclick="closeForm()">EXIT</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+    <div class="about_us">
+        <a href="about.html" class="ftr_mid">About Us</a>
+    </div>
+    <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+    <div style="clear:both"></div>
+</footer>
+</div>
+</body>
+
+</html>

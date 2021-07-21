@@ -1,0 +1,120 @@
+.headerimg {
+  width: 95%;
+  margin: auto;
+  text-align:center;
+  top:60px;
+  position:absolute;
+}
+#himg {
+  width: 600px;
+  height: 150px;
+  margin-left:auto;
+  z-index:-2;
+}
+
+#mapA {
+  float: right;
+  margin:10px 20px 20px 20px;
+}
+
+#mapU {
+  margin:auto;
+}
+
+#manager {
+  float:left;
+  margin-top:10px;
+  margin-left:20px;
+}
+
+.heat {
+  position: absolute;
+  height: 600px;
+  width: 800px;
+}
+
+.background {
+  position: static;
+
+}
+
+.refresh {
+  float: left;
+  margin-top: 20px;
+  height: 50px;
+  width: 100px;
+}
+
+#forms {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 200px;
+  position:absolute;
+}
+
+#history {
+  float: left;
+  position: relative;
+  margin-top: 210px;
+  margin-left: 20px;
+  font-size: 30;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hMark {
+  background-image: url('../Static/hotspot_marker.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.vMark {
+  background-image: url('../Static/venue_marker.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* Navigation Style Start */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #deeafc;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-weight: bold;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  font-weight:bold;
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/* Navigation Style End */

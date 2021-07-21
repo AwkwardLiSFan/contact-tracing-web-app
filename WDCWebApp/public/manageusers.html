@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Account Information</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/adminaccount.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/javascripts/manageusers.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--JQUERY-->
+    </head>
+    <body >
+        <header>
+          <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+          <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+          <div class="header-right">
+             <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+          </div>
+          <p id="logo-text">Safety. Together.</p>
+        </header>
+        <!-- Breadcrumb -->
+        <div>
+            <nav>
+              <ul class="breadcrumb">
+                <li><a href="/admindash.html">Dashboard</a></li>
+                <li>Manage Users/Venues</li>
+              </ul>
+            </nav>
+        </div>
+        <div class="main_content_div">
+            <h1 style="text-align: center">Manage Users/Venues</h1>
+            <div id="usertable2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Given Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody id="add_here">
+
+                    </tbody>
+                </table>
+                <div class="tablebutcont">
+                    <div class="center">
+                        <!-- spacer div -->
+                    </div>
+                </div>
+            </div>
+                <div class="manageBlock" style="display:none;" id="pi">
+                    <form id="piform">
+                        <div class="input-block">
+                            <label for="fname">First Name</label>
+                            <input type="text" maxlength="26" id="fname" name="fname" value="" placeholder="First Name..." required>
+                            <span onclick="document.getElementById('fname').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="lname">Last Name</label>
+                            <input type="text" maxlength="26" id="lname" name="lname" value="" placeholder="Last Name..." required>
+                            <span onclick="document.getElementById('lname').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="email">Email</label>
+                            <input type="email" maxlength="128" minlength="3" id="email" name="email" value="" placeholder="john.doe@gmail.com">
+                            <span onclick="document.getElementById('email').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" value="" placeholder="+61444555666" required>
+                            <span onclick="document.getElementById('phone').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="username">Username</label>
+                            <input type="text" maxlength="32" id="username" name="username" value="" placeholder="Username..." required>
+                            <span onclick="document.getElementById('username').value = ''" class="close">&times;</span>
+                            <span onclick="document.getElementById('pi').style.display = 'none';" class="close-all">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="pwd">Old Password</label>
+                            <input type="password" maxlength="160" id="pwd_old" name="pwd_old" value="" placeholder="Password..." onclick="toggleOld()" style="cursor:pointer" required>
+                            <script>
+                                function toggleOld(){
+                                    var p = document.getElementById('pwd_old');
+                                    if (p.type === "password") {
+                                        p.type = "text";
+                                    } else {
+                                        p.type = "password";
+                                    }
+                                }
+                            </script>
+                            <span onclick="document.getElementById('pwd_old').style.display = 'none';" class="close">&times;</span>
+                        </div>
+                        <br>
+                        <div class="input-block">
+                            <label for="pwd">New Password</label>
+                            <input type="password" maxlength="160" id="pwd" name="pwd" value="" placeholder="Password..." onclick="togglePass1()" style="cursor:pointer" required>
+                            <script>
+                                function togglePass1(){
+                                    var p = document.getElementById('pwd');
+                                    if (p.type === "password") {
+                                        p.type = "text";
+                                    } else {
+                                        p.type = "password";
+                                    }
+                                }
+                            </script>
+                            <span onclick="document.getElementById('pwd').value = ''" class="close">&times;</span>
+
+                        </div>
+                        <div class="input-block">
+                            <label for="pwd-conf">Confirm Password</label>
+                            <!--<input id="pwd_conf" name="pwd_conf" type="password" maxlength="160"  value="" placeholder="Confirm Password..." onclick="togglePass2()" style="cursor:pointer" required>-->
+                            <input id="pwd-conf" name="pwd-conf" type="password" maxlength="160"  value="" placeholder="Confirm Password..." onclick="togglePass2()" style="cursor:pointer" required>
+                            <script>
+                                function togglePass2(){
+                                    var p = document.getElementById('pwd_conf');
+                                    if (p.type === "password") {
+                                        p.type = "text";
+                                    } else {
+                                        p.type = "password";
+                                    }
+                                }
+                            </script>
+                            <span onclick="document.getElementById('pwd_conf').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <input type="submit" value="Apply Changes" onclick="comparePass()"><!--or <input type="submit"> -->
+                        </div>
+                    </form>
+
+                    </div>
+                </div>
+                <br>
+
+                <!-- Venues -->
+                <div id="usertable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Venue Name</th>
+                                <th>Venue Type</th>
+                            </tr>
+                        </thead>
+                        <tbody id="add_venues_here">
+
+                        </tbody>
+                    </table>
+                    <div class="tablebutcont">
+                        <div class="center">
+                            <!-- spacer div -->
+                        </div>
+                    </div>
+                </div>
+
+            <div class="manageBlock" style="display:none" id="venues_pi">
+                    <form id="vpiform">
+                        <div class="input-block">
+                            <label for="vname">Venue Name</label>
+                            <input type="text" maxlength="26" id="vname" name="vname" value="" placeholder="First Name..." required>
+                            <span onclick="document.getElementById('venue_name').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="vaddress">Venue Address</label>
+                            <input type="text" maxlength="26" id="vaddress" name="vaddress" value="" placeholder="Last Name..." required>
+                            <span onclick="document.getElementById('venue_address').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="vcapacity">Venue Capacity</label>
+                            <input type="number" max="100" min="1" id="vcapacity" name="vcapacity" value="" placeholder="100">
+                            <span onclick="document.getElementById('venue_capacity').value = ''" class="close">&times;</span>
+                            <span onclick="document.getElementById('venues_pi').style.display = 'none';" class="close-all">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="vphone">Phone Number</label>
+                            <input type="tel" id="vphone" name="vphone" value="" placeholder="+61444555666" required>
+                            <span onclick="document.getElementById('venue_phone').value = ''" class="close">&times;</span>
+                        </div>
+                        <div class="input-block">
+                            <label for="vtype">Venue Type</label>
+                            <input type="text" maxlength="32" id="vtype" name="vtype" value="" placeholder="Username..." required>
+                            <span onclick="document.getElementById('venue_type').value = ''" class="close">&times;</span>
+                        </div>
+
+                        <div class="input-block">
+                            <input type="submit" value="Apply Changes" onclick="updateVenue()"><!--or <input type="submit"> -->
+                        </div>
+                    </form>
+            </div>
+        <footer>
+            <div class="about_us">
+                <a href="about.html" class="ftr_mid">About Us</a>
+            </div>
+            <div class="socials">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <p>Copyright &copy; 2021</p>
+            </div>
+            <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+            <div style="clear:both"></div>
+        </footer>
+    </body>
+</html>

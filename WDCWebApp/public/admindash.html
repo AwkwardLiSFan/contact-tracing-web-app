@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid-19 Contact Tracing Web App</title>
+  <link rel="stylesheet" href="/stylesheets/checkin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="/javascripts/admindash.js"></script>
+  <script src="/javascripts/checkin.js"></script>
+</head>
+
+<body>
+<div class="main_content_div">
+<header>
+  <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+  <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+  <div class="header-right">
+     <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+  </div>
+  <p id="logo-text">Safety. Together.</p>
+</header>
+
+<!--NOTE: added a home button to fill out dash and keep symmetrical, wasn't sure what else to fill the dash out with-->
+<!-- Breadcrumb -->
+        <div>
+            <nav>
+              <ul class="breadcrumb">
+                <li><a href="/admindash.html">Dashboard</a></li>
+              </ul>
+            </nav>
+        </div>
+
+  <h1 class="homepage-heading">Health Official Dashboard</h1>
+
+  <div id="idreg" class="modal">
+    <span onclick="closeRegPopUp()" class="close" title="Close Modal">&times;</span>
+
+    <!-- Register Content -->
+    <form class="modal-content">
+      <div class="popTitle">
+          <h1>Health Official Registration</h1>
+      </div>
+      <div class="container">
+        <label for="popfname"><b>First Name*</b></label>
+        <input type="text" id="popfname" maxlength="26" class="popinput" placeholder="Enter First Name" name="popfname" required>
+
+        <label for="poplname"><b>Last Name*</b></label>
+        <input type="text" id="poplname" maxlength="26" class="popinput" placeholder="Enter Last Name" name="poplname" required>
+
+        <label for="popemail"><b>Email*</b></label>
+        <input type="email" id="popemail" maxlength="128" minlength="3" class="popinput" placeholder="Enter Email" name="popemail">
+
+        <label for="poptel"><b>Phone Number*</b></label>
+        <input type="tel" id="poptel" class="popinput" minlength="9" maxlength="14" placeholder="Enter Phone Number" name="poptel" required>
+
+        <label for="popusername"><b>Username*</b></label>
+        <input type="text" id="popusername" class="popinput" placeholder="Enter Username" name="popusername" required>
+
+        <label for="poppassword"><b>Password*</b></label>
+        <input type="password" id="poppassword" class="popinput" placeholder="Enter Password" name="poppassword" required>
+
+        <label for="popcpassword"><b>Confirm Password*</b></label>
+        <input type="password" id="popcpassword" class="popinput" placeholder="Re-Enter Password" name="popcpassword" required>
+
+        <button type="submit" class="loginbtn" onclick="registerNewOfficial()">Register</button>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="closeRegPopUp()" class="closebtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="row">
+      <div class="column">
+        <figure>
+        <input class="dashbutton" type="image" src="https://i.ibb.co/BcjWBR7/E.png" name="Account info button" alt="manage account information" style="width:100%" onclick="location.href='adminaccount.html';" />
+        <figcaption class="buttoncaption">MANAGE ACCOUNT INFORMATION</figcaption>
+        </figure>
+      </div>
+      <div class="column">
+        <figure>
+        <input class="dashbutton" type="image" src="https://i.ibb.co/4tqHcz7/manageinfo.jpg" name="Manage_UV" alt="Manage Users/Venues" style="width:100%" onclick="location.href='manageusers.html';"/>
+        <figcaption class="buttoncaption">MANAGE USERS/VENUES</figcaption>
+        </figure>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <figure>
+      <input class="dashbutton" type="image" src="https://i.ibb.co/r6wnkfZ/A.jpg" name="Check-in history button"  alt="view check-in history" style="width:100%" onclick="location.href='adminhistory.html';"/>
+      <figcaption class="buttoncaption">VIEW CHECK IN HISTORY</figcaption>
+      </figure>
+    </div>
+    <div class="column">
+      <figure>
+      <input class="dashbutton" type="image" src="https://i.ibb.co/GTM57MB/D.jpg" name="Add staff button"  alt="add staff" style="width:100%" onclick="openRegPopUp()"/>
+      <figcaption class="buttoncaption">ADD HEALTH OFFICIAL</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <figure>
+      <input class="dashbutton" type="image" src="https://i.ibb.co/NFjpYKx/C.jpg" name="Hotspots Button"  alt="view Hotspots" style="width:100%" onclick="location.href='heatmapA.html';;"/>
+      <figcaption class="buttoncaption">VIEW HOTSPOTS</figcaption>
+      </figure>
+    </div>
+    <div class="column">
+      <figure>
+      <input class="dashbutton" type="image" src="https://i.ibb.co/RC53B23/B.jpg" name="Manage Hotspots button"  alt="Manage hotspots" style="width:100%" onclick="location.href='heatmapA.html';"/>
+      <figcaption class="buttoncaption">MANAGE HOTSPOTS</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<footer>
+    <div class="about_us">
+        <a href="about.html" class="ftr_mid">About Us</a>
+    </div>
+    <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+    <div style="clear:both"></div>
+</footer>
+</body>
+
+</html>

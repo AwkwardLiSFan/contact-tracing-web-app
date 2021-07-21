@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid-19 Contact Tracing Web App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <script src="/javascripts/account.js"></script>
+</head>
+
+
+
+<body>
+<div class="main_content_div">
+  <header>
+    <a href="https://ide-3b11fbcefc8643ed8aabbde2d063795b-8080.cs50.ws"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+      <div class="headerimg"></div>
+      <div class="header-right">
+          <button class="button log" data-href="#register" onclick="openLogPopUp()"><span>Login</span></button>
+          <button class="button reg" data-href="#login" onclick="openRegPopUp()"><span>Register</span></button>
+      </div>
+    <p id="logo-text">Safety. Together.</p>
+  </header>
+
+<!--Page Breadcrums-->
+<div>
+  <nav>
+    <ul class="breadcrumb">
+      <li><a href="/index.html">Home</a></li>
+      <li>About</li>
+    </ul>
+  </nav>
+</div>
+
+<div id="main">
+  <div class="heading-about-us">
+    <h1>Contact Tracers Australia</h1>
+    <p>Pioneering safety</p>
+  </div>
+  <div class="content-about-us">
+    <p>Contact Tracers was established with one goal in mind: to provide reliable, accurate contact-tracing services at zero cost to the citizen. Our designers worked tirelessly to come up with a UI that is
+    as neat as it is easy to use. Say goodbye to apps that make you call your grandkids for help. No matter who you are - an individual citizen, a venue owner or a health official - Contact Tracers is THE
+    ultimate App for you. </p>
+    <p>In these times of uncertainty, we believe in giving power to the citizen. Our contact-tracing app is designed purely with love (and code).</p>
+    <p>No loopholes to exploit your privacy. No shady location tracking. All our collected data goes straight to the government. We don't take a single peek. Promise.</p>
+  </div>
+  <p>Got questions? We'd love to hear from you.<br><br> Please send all business enquiries to <a href="mailto:business@contacttracers.com">business@contacttracers.com.</a></p>
+  <p>For general enquiries, reach out to: <a href="mailto:covidapp@contacttracers.com">covidapp@contacttracers.com.</a></p>
+</div>
+
+<!--Pop Up -->
+<!--Login Pop Up-->
+<div id="idlog" class="modal">
+  <span onclick="closeLogPopUp()" class="close" title="Close Login">&times;</span>
+
+  <form class="modal-content">
+    <div class="popTitle">
+        <h1>Login</h1>
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id="uname" class="popinput" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="psw" class="popinput" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" class="loginbtn">Login</button>
+      <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="container" id="col">
+            <p class="popTitle">Or Login with:</p>
+            <a href="#" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+            </a>
+            <a href="#" class="twitter btn">
+              <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+            </a>
+            <a href="#" class="google btn">
+              <i class="fa fa-google fa-fw"></i> Login with Google+
+            </a>
+        </div>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="closeLogPopUp()" class="closebtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<!--End of Login Pop Up-->
+
+<!-- Register Pop Up -->
+<div id="idreg" class="modal">
+  <span onclick="closeRegPopUp()" class="close" title="Close Sign Up">&times;</span>
+
+  <form class="modal-content">
+    <div class="popTitle">
+        <h1>Register</h1>
+    </div>
+    <div class="container">
+      <label for="popfname"><b>First Name</b></label>
+      <input type="text" id="popfname" maxlength="26" class="popinput" placeholder="Enter First Name" name="popfname" required>
+
+      <label for="poplname"><b>Last Name</b></label>
+      <input type="text" id="poplname" maxlength="26" class="popinput" placeholder="Enter Last Name" name="poplname" required>
+
+      <label for="popemail"><b>Email (Optional)</b></label>
+      <input type="email" id="popemail" maxlength="128" minlength="3" class="popinput" placeholder="Enter Email" name="popemail">
+
+      <label for="poptel"><b>Phone Number</b></label>
+      <input type="tel" id="poptel" class="popinput" minlength="9" maxlength="14" placeholder="Enter Phone Number" name="poptel" required>
+
+      <label for="popusername"><b>Username</b></label>
+      <input type="text" id="popusername" class="popinput" placeholder="Enter Username" name="popusername" required>
+
+      <label for="poppassword"><b>Password</b></label>
+      <input type="password" id="poppassword" class="popinput" placeholder="Enter Password" name="poppassword" required>
+
+      <label for="popcpassword"><b>Confirm Password</b></label>
+      <input type="password" id="popcpassword" class="popinput" placeholder="Re-Enter Password" name="popcpassword" required>
+      <p>Are you a venue manager, check this box to register your venue.</p>
+      <label><input type="checkbox" name="remember"> Venue Manager</label>
+      <br>
+      <br>
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <button type="submit" class="loginbtn">Register</button>
+      <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="closeRegPopUp()" class="closebtn">Cancel</button>
+    </div>
+  </form>
+</div>
+<!--End of Register Pop Up-->
+<!-- End of Pop Up -->
+
+<footer>
+    <div class="about_us">
+        <a href="about.html" class="ftr_mid">About Us</a>
+    </div>
+    <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="faqs"><a href="help.html" class="ftr_mid">Help</a></div>
+    <div style="clear:both"></div>
+</footer>
+</div>
+</body>
+
+</html>

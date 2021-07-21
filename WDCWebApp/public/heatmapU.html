@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid-19 Contact Tracing Web App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/heatmap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/account.css">
+
+  <script src="/javascripts/account.js"></script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+<div class="main_content_div">
+  <header>
+    <a href="index.html"><img id="logo" src="https://covidcp.org/images/logo-icononly.png" alt="Logo for covid contact tracing app"></a>
+    <div class="headerimg" id="headMid"><img id="himg" src="/images/icons34.jpg" alt="Wash hands, wear mask, keep distance"></div>
+    <div class="header-right">
+       <button class="button out" data-href="#login" onclick="logout()"><span>Logout</span></button>
+    </div>
+    <p id="logo-text">Safety. Together.</p>
+  </header>
+
+
+  <!-- Breadcrumb -->
+        <div>
+            <nav>
+              <ul class="breadcrumb">
+                <li><a href="/checkin.html">Dashboard</a></li>
+                <li>View Hotspots</li>
+              </ul>
+            </nav>
+        </div>
+
+  <div id="main">
+    <div id='mapU' style='width: 800px; height: 600px;'></div>
+
+  </div>
+
+
+  <script src="/javascripts/heatmapU.js"></script>
+
+  <footer>
+    <div class="about_us" style="font-family:Raleway;">
+        <a href="about.html" class="ftr_mid">About Us</a>
+    </div>
+    <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="faqs" style="font-family:Raleway;"><a href="help.html" class="ftr_mid">Help</a></div>
+    <div style="clear:both"></div>
+  </footer>
+</div>
+</body>
+
+</html>
