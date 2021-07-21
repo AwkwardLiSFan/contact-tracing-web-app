@@ -1,3 +1,5 @@
+Contribution to group project: everything EXCLUDING the heatmap and Venue Manager dashboard functions 
+
 Extra information regarding the WDC Project (Group 69):
 
 a) Database:
