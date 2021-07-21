@@ -1,4 +1,4 @@
-Contribution to project: everything EXCLUDING the heatmap and User/Venue Manager dashboard functions, JavaScript linting, miscellaneous CSS (mainly background and headers)
+Contribution to project: everything EXCLUDING the heatmap and User/Venue Manager Profile Management functions, JavaScript linting, miscellaneous CSS (mainly background and headers)
 
 Credentials for login: 
 User - Username: 123456 Password: 12345 
